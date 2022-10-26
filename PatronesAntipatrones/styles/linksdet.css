@@ -1,0 +1,57 @@
+.lst-dets ::-moz-selection {
+	background: transparent;
+}
+.lst-dets ::selection {
+	background: transparent;
+}
+.lst-dets a {
+  color: inherit;
+}
+.lst-dets a:hover {
+  background-color: var(--hover);
+}
+.lst-dets a:active, .lst-dets a.active {
+  background-color: var(--primary-main-50);
+}
+
+.lst-dets details {
+  width: 100%;
+}
+.lst-dets details summary {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: var(--background);
+}
+.lst-dets details summary > * {
+  flex-grow: 1;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+}
+.lst-dets details summary::after {
+  content: '+';
+  flex-grow: unset;
+  width: 2em;
+  color: var(--primary-constrast);
+  background-color: var(--primary-main);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lst-dets details[open] summary::after {
+  content: '-';
+}
+
+.lst-links {
+  box-shadow: var(--shadow-in);
+  padding: 0.25em 0px;
+}
+.lst-links a {
+  display: block;
+  padding: 0.5em 1em;
+  padding-left: 1em;
+  color: var(--text-secondary);
+}

@@ -1,0 +1,48 @@
+<html>
+<head>
+  <title>Fundamentos de Diseño de Software</title>
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  <meta lang="es" />
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="unsafe-url" />
+</head>
+<body class="light">
+  
+  <!-- ASIDE -->
+  <aside>
+    <label class="switch">
+      <input type="checkbox" checked id="ispatron"/>
+      <span class="slider round">
+        <span class="on">😄</span>
+        <span class="off">😡</span>
+      </span>
+      <span class="opt on" id="btn-patterns">Patrones</span>
+      <span class="opt off" id="btn-antipatterns">AntiPatrones</span>
+    </label>
+    <nav class="lst-dets" id="lst-patterns"></nav>
+    <nav class="lst-dets" id="lst-antipatterns"></nav>
+  </aside>
+  <!-- !ASIDE -->
+
+  <!-- MAIN -->
+  <main>
+    <section id="sect-patterns">
+      <h2>Patrones <span class="material-icons">extension</span> </h2>
+      <p>Ver más en 
+        <a href="https://refactoring.guru/es/design-patterns" target="_blank">refactoring.guru/es</a>
+      </p>
+    </section>
+    <section id="sect-antipatterns">
+      <h2>AntiPatrones <span class="material-icons">extension_off</span> </h2>
+    </section>
+  </main>
+  <!-- !MAIN -->
+  
+  <!-- SCRIPTS -->
+  <script type="text/javascript" src="./js/teory.js"></script>
+  <script type="text/javascript" src="./js/fillhtml.js"></script>
+  <script type="text/javascript" src="./js/switch.js"></script>
+</body>
+</html>

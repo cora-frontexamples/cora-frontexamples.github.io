@@ -1,0 +1,6 @@
+interfaces:
+métodos que pueden ser obligatorios de usar
+como contrato en el cual permite que un objeto haga ciertas cosas
+Métodos que no necesitan sobreescribirse => herencia
+Para herencias múltiples si el lenguaje no lo permite ej.
+
