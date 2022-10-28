@@ -2,7 +2,7 @@
 
 .switch {
   position: relative;
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
 .switch input {
@@ -10,6 +10,8 @@
   width: 0;
   height: 0;
 }
+
+/* SIDE OPTIONS */
 .switch .opt {
   text-transform: uppercase;
   font-size: 0.75em;
@@ -19,7 +21,7 @@
   display: none;
 }
 
-/* The slider */
+/* SLIDER */
 .slider {
   display: inline-block;
   position: relative;
@@ -99,4 +101,29 @@ input:checked + .slider .off {
 }
 .slider.round:before {
   border-radius: 50%;
+}
+
+
+/* ICON */
+input.tgg-ic {
+  width: 2em;
+  height: 2em;
+  position: relative;
+  font-size: 1em;
+}
+input.tgg-ic::before {
+  content: attr(data-checked);
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  top: -2pt;
+  font-size: 2em;
+  background: var(--background);
+  border: 2pt solid var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input.tgg-ic:checked::before {
+  content: attr(data-unchecked);
 }

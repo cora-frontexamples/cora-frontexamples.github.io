@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('switch.css');
 @import url('linksdet.css');
+@import url('items.css');
 
 
 .light {
@@ -80,6 +81,9 @@ input[type="date"]::selection, mark {
 *:not(a, button, input) {
   cursor: default;
 }
+.mobile {
+  display: none;
+}
 
 /* BODY */
 html, body {
@@ -119,11 +123,13 @@ aside {
   max-height: 100%;
   background-color: var(--paper);
   box-shadow: var(--shadow-lvl2);
+  z-index: 100;
 }
 aside .switch {
+  width: 100%;
+  top: 0px;
   padding: 1em;
   position: sticky;
-  top: 0px;
   background: inherit;
   z-index: 99;
   box-shadow: var(--shadow-lvl1);
@@ -154,62 +160,37 @@ main section h2 {
 .type h3 {
   width: 100%;
 }
-.type .item {
-  min-width: 28em;
-  width: calc(50% - 2.25em);
-  padding: 1em;
-  box-shadow: var(--shadow-lvl0);
-  transition: 0.4s;
-  gap: 0.5em;
-  display: flex;
-  align-items: stretch;
-}
-.type .item:hover {
-  border-color: transparent;
-  background-color: var(--paper);
-  box-shadow: var(--shadow-lvl2);
+
+
+
+/* RESPONSIVE */
+@media (max-width: 720px) {
+  body {
+    flex-direction: column;
+  }
+  aside {
+    min-height: 3em;
+    width: calc(100% - 1em);
+    padding-right: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  aside .switch {
+    width: fit-content;
+    box-shadow: none;
+  }
+  main {
+    max-width: 100%;
+  }
+  .mobile {
+    display: block;
+  }
 }
 
-.type .item .description {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  gap: 0.5em;
-}
-.type .item .summary {
-  flex-grow: 1;
-  color: var(--text-secondary);
-}
-.type .item img {
-  max-width: 16em;
-  align-self: center;
-}
-.light .item img {
-  filter: drop-shadow(0px 1px 2px var(--shadow) ) saturate(20) hue-rotate(103deg);
-}
-.dark .item img {
-  filter: drop-shadow(0px 1px 2px var(--shadow) ) grayscale(1);
-}
-.type .item img {
-  max-width: 16em;
-  align-self: center;
-  transition: 0.4s;
-}
-.type .item:hover img {
-  transform: scale(1.15);
-}
 
-.type .item .examples {
-  display: flex;
-  gap: 0.25em;
-}
-.type .item .examples span::before {
-  content: '#';
-}
-.type .item .examples span {
-  background: var(--hover);
-  padding: 0.25em 0.5em;
-}
-.type .item .examples span:hover {
-  background: var(--active);
+@media (max-width: 512px) {
+  main {
+    padding: 1em 2em;
+  }
 }

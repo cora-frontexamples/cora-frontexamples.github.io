@@ -1,3 +1,7 @@
+.lst-dets {
+  background: var(--paper);
+}
+
 .lst-dets ::-moz-selection {
 	background: transparent;
 }
@@ -54,4 +58,23 @@
   padding: 0.5em 1em;
   padding-left: 1em;
   color: var(--text-secondary);
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width: 720px) {
+  .lst-dets {
+    position: absolute;
+    left: -16em;
+    top: 3em;
+    max-height: calc(100% - 3em);
+    overflow-y: auto;
+    transition: .4s;
+  }
+  input.tgg-ic:checked ~ .lst-dets {
+    -webkit-transform: translateX(16em);
+    -ms-transform: translateX(16em);
+    transform: translateX(16em);
+  }
 }
