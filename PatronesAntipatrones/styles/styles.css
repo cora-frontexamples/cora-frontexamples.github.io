@@ -169,9 +169,12 @@ main section h2 {
     flex-direction: column;
   }
   aside {
-    min-height: 3em;
+    height: 3em;
     width: calc(100% - 1em);
     padding-right: 1em;
+    position: fixed;
+    top: 0px;
+    overflow-y: visible;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -182,6 +185,8 @@ main section h2 {
   }
   main {
     max-width: 100%;
+    margin-top: 3em;
+    overflow-y: unset;
   }
   .mobile {
     display: block;

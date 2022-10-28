@@ -68,7 +68,7 @@
     position: absolute;
     left: -16em;
     top: 3em;
-    max-height: calc(100% - 3em);
+    height: calc(100vh - 3em);
     overflow-y: auto;
     transition: .4s;
   }
